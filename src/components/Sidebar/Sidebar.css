@@ -1,0 +1,47 @@
+.sidebar {
+    width: 250px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+}
+
+.sidebar-header {
+    padding: 1rem;
+    text-align: center;
+}
+
+.app-name {
+    font-size: 32px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.flow {
+    color: #4b90e2;
+}
+
+.k {
+    color: #17a2b8;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-link {
+    padding: 0.75rem 1rem !important;
+    border: none !important;
+    color: #333 !important;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #4b90e2 !important;
+    color: #ffffff !important;
+}

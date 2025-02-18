@@ -1,0 +1,62 @@
+/* Глобальные стили */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; /* Используем Inter */
+}
+
+/* Стили для сайдбара */
+.sidebar {
+    width: 250px; /* Фиксированная ширина */
+    min-height: 100vh; /* Высота на весь экран */
+    background-color: #FFFFFF; /* Белый фон */
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Тень справа */
+}
+
+/* Стили для пунктов меню */
+.nav-item {
+    width: 100%; /* Растягиваем на всю ширину */
+}
+
+.nav-link {
+    padding: 0.75rem 1rem !important; /* Отступы */
+    border: none !important; /* Убираем границы */
+    color: #333 !important; /* Цвет текста */
+    font-weight: 600; /* Inter SemiBold */
+    display: flex;
+    align-items: center; /* Центрируем иконки и текст */
+    justify-content: center; /* Центрируем по ширине */
+    width: 100%; /* Растягиваем на всю ширину */
+    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+}
+
+.nav-link:hover {
+    background-color: #4B90E2 !important; /* Цвет фона при наведении */
+    color: #ffffff !important; /* Цвет текста при наведении */
+}
+
+/* Заголовок Runs */
+.runs-title {
+    font-size: 32px; /* Размер шрифта 32px */
+    font-weight: 800; /* Inter Extra Bold */
+    margin-bottom: 1rem; /* Отступ снизу */
+}
+
+/* Стили для хэдера */
+.header {
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень снизу */
+    padding: 1rem;
+}
+
+.search-input {
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+    padding: 0.5rem 1rem;
+    width: 100%;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

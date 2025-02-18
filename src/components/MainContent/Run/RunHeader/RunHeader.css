@@ -1,0 +1,25 @@
+.run-header {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.status {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.status.завершен {
+    color: #28a745;
+}
+
+.status.ошибка {
+    color: #dc3545;
+}
+
+.status.в-процессе,
+.status.ожидание {
+    color: #6c757d;
+}
