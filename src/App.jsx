@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
-import MainContent from './components/MainContent';
+import Menu from './components/Menu/Menu';
+import Main from './components/Main/Main';
 import './App.css';
 
 function App() {
@@ -10,11 +10,11 @@ function App() {
         <div className="App d-flex" style={{ minHeight: '100vh' }}>
             {/* Сайдбар: фиксированная ширина */}
             <div className={`sidebar ${showSidebar ? 'd-block' : 'd-none d-lg-block'}`}>
-                <Sidebar />
+                <Menu />
             </div>
             {/* Основной контент: занимает оставшееся пространство */}
             <div className="flex-grow-1" style={{ backgroundColor: '#f2f2f2' }}>
-                <MainContent />
+                <Main />
             </div>
         </div>
     );

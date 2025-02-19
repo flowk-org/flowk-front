@@ -1,7 +1,7 @@
 import React from 'react';
-import RunList from './RunList';
+import RunList from './RunList/RunList';
 
-const MainContent = () => {
+const Main = () => {
     return (
         <div style={{ backgroundColor: '#f2f2f2', minHeight: '100vh' }}>
             {/* Хэдер */}
@@ -36,4 +36,4 @@ const MainContent = () => {
     );
 };
 
-export default MainContent;
+export default Main;

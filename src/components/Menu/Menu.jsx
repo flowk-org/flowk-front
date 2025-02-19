@@ -1,7 +1,7 @@
 import React from 'react';
-import './Sidebar/Sidebar.css';
+import './Menu.css';
 
-const Sidebar = () => {
+const Menu = () => {
     return (
         <div className="sidebar">
             <div className="sidebar-header">
@@ -31,4 +31,4 @@ const Sidebar = () => {
     );
 };
 
-export default Sidebar;
+export default Menu;
