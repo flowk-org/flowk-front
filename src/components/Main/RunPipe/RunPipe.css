@@ -1,0 +1,13 @@
+.runPipeContainer {
+    display: flex;
+    align-items: center;
+}
+
+.runPipeStageWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.runPipeArrow {
+    margin: 0 8px;
+}

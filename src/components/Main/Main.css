@@ -1,0 +1,46 @@
+.mainContainer {
+    background-color: #f2f2f2;
+    min-height: 100vh;
+}
+
+.header {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headerContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.searchContainer {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.searchInput {
+    border-radius: 20px;
+    border: 1px solid #e9ecef;
+    padding: 0.5rem 1rem;
+}
+
+.avatarContainer {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+.runsTitle {
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+}

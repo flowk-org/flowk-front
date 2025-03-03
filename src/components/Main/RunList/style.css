@@ -1,0 +1,188 @@
+.badges {
+    align-items: flex-start;
+    display: inline-flex;
+    gap: 8px;
+    padding: 4px 8px;
+    position: relative;
+}
+
+.badges .text-wrapper {
+    font-family: "Inter-SemiBold", Helvetica;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: normal;
+    margin-top: -1.00px;
+    position: relative;
+    text-align: center;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.badges.pill {
+    border-radius: 12px;
+}
+
+.badges.simple {
+    border-radius: 4px;
+}
+
+.badges.fill.danger {
+    background-color: var(--status-color-danger);
+}
+
+.badges.primary.fill {
+    background-color: var(--primarycolor);
+}
+
+.badges.success.soft {
+    background-color: var(--green-100);
+}
+
+.badges.secondary.soft {
+    background-color: var(--secondarylight-color);
+}
+
+.badges.light.soft {
+    background-color: var(--gray-100);
+}
+
+.badges.success.fill {
+    background-color: var(--status-color-success);
+}
+
+.badges.fill.dark {
+    background-color: var(--gray-800);
+}
+
+.badges.soft.info {
+    background-color: var(--cyan-100);
+}
+
+.badges.soft.danger {
+    background-color: var(--red-100);
+}
+
+.badges.fill.warning {
+    background-color: var(--status-color-warning);
+}
+
+.badges.secondary.fill {
+    background-color: var(--secondarycolor);
+}
+
+.badges.light.fill {
+    background-color: var(--gray-200);
+}
+
+.badges.soft.warning {
+    background-color: var(--yellow-100);
+}
+
+.badges.soft.dark {
+    background-color: var(--gray-500);
+}
+
+.badges.fill.info {
+    background-color: var(--status-color-info);
+}
+
+.badges.primary.soft {
+    background-color: var(--primarylight);
+}
+
+.badges.soft.dark .text-wrapper {
+    color: var(--gray-800);
+}
+
+.badges.fill.danger .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.success.fill .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.fill.warning .text-wrapper {
+    color: var(--gray-800);
+}
+
+.badges.fill.info .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.secondary.fill .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.fill.dark .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.primary.fill .text-wrapper {
+    color: var(--defaultwhite);
+}
+
+.badges.success.soft .text-wrapper {
+    color: var(--green-800);
+}
+
+.badges.soft.info .text-wrapper {
+    color: var(--cyan-800);
+}
+
+.badges.secondary.soft .text-wrapper {
+    color: var(--gray-900);
+}
+
+.badges.primary.soft .text-wrapper {
+    color: var(--primarycolor-dark);
+}
+
+.badges.light.soft .text-wrapper {
+    color: var(--gray-700);
+}
+
+.badges.soft.danger .text-wrapper {
+    color: var(--red-800);
+}
+
+.badges.light.fill .text-wrapper {
+    color: var(--gray-800);
+}
+
+.badges.soft.warning .text-wrapper {
+    color: var(--yellow-800);
+}
+
+:root {
+    --cyan-100: rgba(207, 244, 252, 1);
+    --cyan-800: rgba(5, 81, 96, 1);
+    --defaultwhite: rgba(255, 255, 255, 1);
+    --gray-100: rgba(248, 249, 250, 1);
+    --gray-200: rgba(233, 236, 239, 1);
+    --gray-500: rgba(173, 181, 189, 1);
+    --gray-700: rgba(73, 80, 87, 1);
+    --gray-800: rgba(52, 58, 64, 1);
+    --gray-900: rgba(33, 37, 41, 1);
+    --green-100: rgba(209, 231, 221, 1);
+    --green-800: rgba(10, 54, 34, 1);
+    --grey-1-color: rgba(184, 184, 184, 1);
+    --grey-2-color: rgba(134, 134, 134, 1);
+    --primary-color: rgba(0, 147, 121, 1);
+    --primarycolor: rgba(119, 73, 248, 1);
+    --primarycolor-dark: rgba(82, 39, 204, 1);
+    --primarylight: rgba(235, 229, 252, 1);
+    --red-100: rgba(248, 215, 218, 1);
+    --red-800: rgba(88, 21, 28, 1);
+    --secondary-color: rgba(1, 109, 90, 1);
+    --secondarycolor: rgba(108, 117, 125, 1);
+    --secondarylight-color: rgba(171, 181, 190, 1);
+    --status-color-danger: rgba(220, 53, 69, 1);
+    --status-color-info: rgba(23, 162, 184, 1);
+    --status-color-success: rgba(40, 167, 69, 1);
+    --status-color-warning: rgba(255, 193, 7, 1);
+    --white-color: rgba(255, 255, 255, 1);
+    --yellow-100: rgba(255, 243, 205, 1);
+    --yellow-800: rgba(102, 77, 3, 1);
+}

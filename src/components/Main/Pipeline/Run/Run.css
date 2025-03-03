@@ -1,0 +1,27 @@
+.run-container {
+    width: 1141px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.run-info-wrapper {
+    height: 50px;
+    background-color: #FFFFFF;
+    border-bottom:  #B3B3B3;
+    border-bottom-width: 0.6px;
+    border-bottom-style: solid;
+}
+
+.pipeline-wrapper {
+    height: 100px;
+    background-color: #FFFFFF; /* Для демонстрации, можно удалить */
+    display: flex;
+    align-items: center;
+    padding-left: 149px;
+    padding-right: 149px;
+    justify-content: center;
+    border-bottom:  #B3B3B3;
+    border-bottom-width: 0.6px;
+    border-bottom-style: solid;
+}

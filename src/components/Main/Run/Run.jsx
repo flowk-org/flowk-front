@@ -1,10 +1,21 @@
 import React from 'react';
-import RunBody from '../RunBody/RunBody';
+import RunPipe from "../RunPipe/RunPipe";
+import '../Run/Run.css';
 
 const Run = ({ id, date, status, stages }) => {
+    const statusColor = status === 'Завершен' ? '#28a745' : status === 'Ошибка' ? '#dc3545' : '#6c757d';
+
     return (
-        <div style={{ backgroundColor: '#ffffff', borderRadius: '8px', marginBottom: '16px', padding: '16px' }}>
-            <RunBody id={id} date={date} status={status} stages={stages} />
+        <div className="runContainer">
+            <div className="runHeader">
+                {/* ID запуска */}
+                <span className="runId">#{id}</span>
+                <span className="runDate">{date}</span>
+                <span className="runStatus" style={{ color: statusColor }}>
+                    {status}
+                </span>
+            </div>
+            <RunPipe stages={stages} />
         </div>
     );
 };

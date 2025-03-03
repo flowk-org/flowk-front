@@ -1,16 +1,15 @@
 import React from 'react';
 import RunStage from '../RunStage/RunStage';
+import '../RunPipe/RunPipe.css'; // Импортируем стили
 
 const RunPipe = ({ stages }) => {
     return (
-        <div style={{ display: 'flex', alignItems: 'center' }}>
+        <div className="runPipeContainer">
             {stages.map((stage, index) => (
-                <div key={index} style={{ display: 'flex', alignItems: 'center' }}>
-                    {/* Этап */}
+                <div key={index} className="runPipeStageWrapper">
                     <RunStage stageName={stage.name} isCompleted={stage.isCompleted} />
-                    {/* Стрелочка (только если не последний этап) */}
                     {index < stages.length - 1 && (
-                        <span style={{ margin: '0 8px' }}>
+                        <span className="runPipeArrow">
                             ➔
                         </span>
                     )}

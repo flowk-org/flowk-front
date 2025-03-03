@@ -1,0 +1,21 @@
+.runStageContainer {
+    display: flex;
+    align-items: center;
+}
+
+.runStageCircle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 12px;
+}
+
+.runStageName {
+    margin-left: 8px;
+    font-size: 14px;
+    color: #333;
+}
