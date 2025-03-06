@@ -1,8 +1,6 @@
 import React from 'react';
 import RunList from './RunList/RunList';
 import '../Main/Main.css';
-import Pipeline from "./Pipeline/Pipeline/Pipeline";
-import Run from "./Pipeline/Run/Run";
 
 const Main = () => {
     return (

@@ -10,8 +10,8 @@ const RunList = () => {
             date: "Feb 15, 21:20",
             status: "Failed",
             stages: [
-                {title: "Data Preparation", status: "completed"},
-                {title: "Model Training", status: "completed"},
+                {title: "Data Preparation", status: "pending"},
+                {title: "Model Training", status: "pending"},
                 {title: "Model Evaluation", status: "failed"},
                 {title: "Deploy to QA", status: "failed"}
             ],
@@ -27,7 +27,7 @@ const RunList = () => {
                 {title: "Model Evaluation", status: "running"},
                 {title: "Deploy to QA", status: "pending"}
             ],
-            replayedByRuns: [{id: 3, stage: 3}]
+            replayedFromStages: [3]
         },
         {
             id: 1,

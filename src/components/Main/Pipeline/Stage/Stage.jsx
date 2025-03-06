@@ -9,8 +9,10 @@ const mapStatusToProperties = (status) => {
             return {color: '#5190D9', icon: '', border: 'none'};
         case "failed":
             return {color: '#D54D53', icon: "bi-x-lg", border: 'none'};
-        default:
+        case "pending":
             return {color: '#FFFFFF', icon: '', border: '4px solid #B3B3B3'};
+        default:
+            return {color: '#FFFFFF', icon: '',};
     }
 }
 
@@ -24,6 +26,7 @@ const Stage = ({status, title, position}) => {
     const {color, icon, border} = mapStatusToProperties(status)
     const leftLineBg = enhanceLine(position, false)
     const rightLineBg = enhanceLine(position, true)
+
     return (
         <div className="stage-container">
             <div className="stage-with-lines">
