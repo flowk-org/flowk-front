@@ -2,14 +2,7 @@ import React from 'react';
 import './Pipeline.css';
 import Stage from "../Stage/Stage";
 
-const Pipeline = () => {
-    const stages = [
-        {status: "completed", title: "Data Preparation"},
-        {status: "completed", title: "Model Training"},
-        {status: "running", title: "Model Evaluation"},
-        {status: "pending", title: "Deploy to QA"}
-    ];
-
+const Pipeline = ({stages}) => {
     return (
         <div className="pipeline-container">
             {stages.map((stage, index) => (

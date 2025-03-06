@@ -22,17 +22,8 @@
     font-size: 16px;
 }
 
-.badge-custom {
-    margin-right: 20px;
-    color: white;
-    height: 25px;
-    font-size: 14px;
-    border-radius: 12px;
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    --status-color-info: #5190D9;
-    --status-color-danger: #D54D53;
-    --status-color-success: #8CC04F;
+.date-text-wrapper {
+    margin-left: 20px;
 }
 
 .fold-icon {
@@ -41,3 +32,4 @@
     width: 20px;
     height: 20px;
 }
+

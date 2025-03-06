@@ -26,9 +26,9 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/*<Stage status="completed" title={"Deploy to Dev"}/>*/}
-            <Pipeline></Pipeline>
-            <Run></Run>
+            {/*/!*<Stage status="completed" title={"Deploy to Dev"}/>*!/*/}
+            {/*<Pipeline></Pipeline>*/}
+            {/*<Run></Run>*/}
             <div className="content">
                 <h2 className="runsTitle">Runs</h2>
                 <RunList />
