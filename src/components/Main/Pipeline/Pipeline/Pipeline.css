@@ -31,7 +31,7 @@
     bottom: 0;
     left: 40px;
     width: 24px;
-    height: 80px;
+    height: 250px;
     border-bottom: 4px solid #B3B3B3;
     border-right: 4px solid #B3B3B3;
     border-radius: 0 0 24px 0;
@@ -53,12 +53,13 @@
     top: 0;
     left: 60px;
     width: 80px;
-    height: 80px;
+    height: 64px;
     border-top: 4px solid #B3B3B3;
     border-left: 4px solid #B3B3B3;
     border-radius: 24px 0 0 0;
 }
 
 .pipeline-line.blank {
-    color: #FFFFFF;
+     background-color: #FFFFFF;
+
 }

@@ -6,7 +6,7 @@ const mapStatusToProperties = (status) => {
         case "completed":
             return {color: '#8CC04F', icon: "bi-check2", border: 'none'};
         case "running":
-            return {color: '#5190D9', icon: '', border: 'none'};
+            return {color: '#5190D9', icon: 'time', border: 'none'};
         case "failed":
             return {color: '#D54D53', icon: "bi-x-lg", border: 'none'};
         case "pending":
@@ -26,9 +26,10 @@ const Stage = ({status, title, position}) => {
     const {color, icon, border} = mapStatusToProperties(status)
     const leftLineBg = enhanceLine(position, false)
     const rightLineBg = enhanceLine(position, true)
+    const time = "8s"
 
     return (
-        <div className="stage-container">
+        <div className={`stage-container ${status}`}>
             <div className="stage-with-lines">
                 <div className="left-side-line" style={{backgroundColor: `${leftLineBg}`}}></div>
                 <div className="stage"
@@ -36,7 +37,10 @@ const Stage = ({status, title, position}) => {
                          backgroundColor: color,
                          border: border
                      }}>
-                    <i className={`bi ${icon} stage-icon`}></i>
+                    {icon !== "time" ?
+                        <i className={`bi ${icon} stage-icon`}></i> :
+                        <div className="time-wrapper">{time}</div>
+                    }
                 </div>
                 <div className="right-side-line" style={{backgroundColor: `${rightLineBg}`}}></div>
             </div>

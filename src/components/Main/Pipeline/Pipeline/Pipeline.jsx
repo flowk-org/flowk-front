@@ -3,7 +3,6 @@ import './Pipeline.css';
 import Stage from "../Stage/Stage";
 
 const Pipeline = ({stages, lines}) => {
-
     return (
         <div className="pipeline-container">
             {stages.map((stage, index) => (
