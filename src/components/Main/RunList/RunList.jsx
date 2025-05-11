@@ -16,6 +16,14 @@ const RunList = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [error, setError] = useState(null);
 
+    // Маппинг ивентов на стадии и их состояния
+    const eventToStageMapping = {
+        DataPreparedEvent: { stageIndex: 0, status: "completed" },
+        DataPreparationFailedEvent: { stageIndex: 0, status: "failed" },
+        ModelEvaluationStartedEvent: { stageIndex: 2, status: "running" },
+        ModelEvaluationCompletedEvent: { stageIndex: 2, status: "completed" },
+    };
+
     useEffect(() => {
         const fetchRuns = async () => {
             try {
@@ -59,19 +67,67 @@ const RunList = () => {
             console.log('STOMP-соединение установлено:', frame);
             stompClient.subscribe('/topic/app', (message) => {
                 try {
-                    const updatedRun = JSON.parse(message.body);
-                    console.log('STOMP сообщение:', updatedRun);
-                    if (updatedRun && typeof updatedRun.id === 'number') {
+                    const event = JSON.parse(message.body);
+                    console.log('STOMP сообщение:', event);
+
+                    if (event && event.runId && event.eventType) {
+                        const mapping = eventToStageMapping[event.eventType];
+                        if (!mapping) {
+                            console.warn(`Неизвестный тип ивента: ${event.eventType}`);
+                            return;
+                        }
+
                         setRuns((prevRuns) => {
-                            const runExists = prevRuns.some((run) => run.id === updatedRun.id);
+                            const runExists = prevRuns.some((run) => run.id.toString() === event.runId);
                             if (runExists) {
-                                return prevRuns.map((run) =>
-                                    run.id === updatedRun.id
-                                        ? { ...run, ...updatedRun }
-                                        : run
-                                );
+                                // Обновление существующего запуска
+                                return prevRuns.map((run) => {
+                                    if (run.id.toString() === event.runId) {
+                                        const newStages = [...run.stages];
+                                        newStages[mapping.stageIndex] = mapping.status;
+                                        // Обновляем stageStartTimes
+                                        const newStageStartTimes = [...(run.stageStartTimes || [])];
+                                        if (mapping.status === "running") {
+                                            newStageStartTimes[mapping.stageIndex] = event.timestamp;
+                                        } else {
+                                            newStageStartTimes[mapping.stageIndex] = null;
+                                        }
+                                        // Обновляем общий статус
+                                        const newStatus = newStages.every(s => s === "completed")
+                                            ? "Completed"
+                                            : newStages.includes("failed")
+                                                ? "Failed"
+                                                : "Running";
+                                        return {
+                                            ...run,
+                                            stages: newStages,
+                                            status: newStatus,
+                                            stageStartTimes: newStageStartTimes
+                                        };
+                                    }
+                                    return run;
+                                });
                             } else {
-                                return [updatedRun, ...prevRuns];
+                                // Новый запуск
+                                const newRun = {
+                                    id: parseInt(event.runId.replace("run-", "")),
+                                    date: new Date(event.timestamp).toLocaleString('en-US', {
+                                        month: 'short',
+                                        day: '2-digit',
+                                        hour: '2-digit',
+                                        minute: '2-digit'
+                                    }),
+                                    status: mapping.status === "failed" ? "Failed" : "Running",
+                                    stages: ["pending", "pending", "pending", "pending"].map(
+                                        (s, index) => index === mapping.stageIndex ? mapping.status : s
+                                    ),
+                                    stageStartTimes: ["pending", "pending", "pending", "pending"].map(
+                                        (s, index) => index === mapping.stageIndex && mapping.status === "running" ? event.timestamp : null
+                                    ),
+                                    replayOfRun: null,
+                                    replayedFromStages: null
+                                };
+                                return [newRun, ...prevRuns];
                             }
                         });
                     }

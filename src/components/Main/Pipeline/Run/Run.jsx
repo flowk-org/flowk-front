@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Pipeline from "../Pipeline/Pipeline";
-import RunInfo from "../RunInfo/RunInfo"; // Импортируем новый компонент
+import RunInfo from "../RunInfo/RunInfo";
 import "./Run.css";
 
 const getLinesFromRun = (run) => {
@@ -15,7 +15,7 @@ const getLinesFromRun = (run) => {
             line = "curved-left";
         }
         if (run.replayOfRun?.stage > index + 2) {
-            line = "blank"
+            line = "blank";
         }
         lines.push(line);
     });
@@ -23,24 +23,25 @@ const getLinesFromRun = (run) => {
     return lines;
 };
 
-const makeStages =  (stages, run) => {
+const makeStages = (stages, run) => {
     const enhancedStages = [];
 
     stages.forEach((stage, index) => {
         enhancedStages.push({
             title: stage,
-            status: run.stages.at(index)
+            status: run.stages.at(index),
+            startTime: run.stageStartTimes?.[index] || null
         });
     });
 
     return enhancedStages;
-}
+};
 
-const Run = ({pipeline, run}) => {
+const Run = ({ pipeline, run }) => {
     const [isPipelineVisible, setIsPipelineVisible] = useState(true);
 
     const lines = getLinesFromRun(run);
-    const stages = makeStages(pipeline.stages, run)
+    const stages = makeStages(pipeline.stages, run);
 
     return (
         <div className="run-container">
@@ -54,7 +55,7 @@ const Run = ({pipeline, run}) => {
             </div>
             {isPipelineVisible && (
                 <div className="pipeline-wrapper">
-                    <Pipeline stages={stages} lines={lines}/>
+                    <Pipeline stages={stages} lines={lines} />
                 </div>
             )}
         </div>
