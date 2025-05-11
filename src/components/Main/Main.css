@@ -1,28 +1,33 @@
 .mainContainer {
     background-color: #f2f2f2;
-    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .header {
+    background-color: #ffffff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
 }
 
 .headerContent {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
 .searchContainer {
-    width: 80%;
-    display: flex;
-    align-items: center;
+    flex-grow: 1;
 }
 
 .searchInput {
     border-radius: 20px;
     border: 1px solid #e9ecef;
     padding: 0.5rem 1rem;
+    width: 100%;
 }
 
 .avatarContainer {
@@ -43,4 +48,5 @@
 .runsTitle {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    font-size: 28px;
 }

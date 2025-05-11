@@ -1,50 +1,65 @@
 /* Глобальные стили */
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif; /* Используем Inter */
+    font-family: 'Inter', sans-serif;
 }
 
-/* Стили для сайдбара */
+.app-container {
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+/* Сайдбар */
 .sidebar {
-    width: 250px; /* Фиксированная ширина */
-    min-height: 100vh; /* Высота на весь экран */
-    background-color: #FFFFFF; /* Белый фон */
-    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1); /* Тень справа */
+    width: 250px;
+    min-height: 100vh;
+    background-color: #ffffff;
+    box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
-/* Стили для пунктов меню */
+/* Основной контент */
+.main-content {
+    flex-grow: 1;
+    background-color: #f2f2f2;
+    overflow-y: auto;
+}
+
+/* Пункты меню */
 .nav-item {
-    width: 100%; /* Растягиваем на всю ширину */
+    width: 100%;
 }
 
 .nav-link {
-    padding: 0.75rem 1rem !important; /* Отступы */
-    border: none !important; /* Убираем границы */
-    color: #333 !important; /* Цвет текста */
-    font-weight: 600; /* Inter SemiBold */
+    padding: 0.75rem 1rem;
+    border: none;
+    color: #333;
+    font-weight: 600;
     display: flex;
-    align-items: center; /* Центрируем иконки и текст */
-    justify-content: center; /* Центрируем по ширине */
-    width: 100%; /* Растягиваем на всю ширину */
-    transition: background-color 0.3s, color 0.3s; /* Плавный переход */
+    align-items: center;
+    justify-content: flex-start; /* исправлено */
+    width: 100%;
+    transition: background-color 0.3s, color 0.3s;
+    gap: 0.5rem;
 }
 
 .nav-link:hover {
-    background-color: #4B90E2 !important; /* Цвет фона при наведении */
-    color: #ffffff !important; /* Цвет текста при наведении */
+    background-color: #4B90E2;
+    color: #ffffff;
 }
 
 /* Заголовок Runs */
 .runs-title {
-    font-size: 32px; /* Размер шрифта 32px */
-    font-weight: 800; /* Inter Extra Bold */
-    margin-bottom: 1rem; /* Отступ снизу */
+    font-size: 32px;
+    font-weight: 800;
+    margin-bottom: 1rem;
 }
 
-/* Стили для хэдера */
+/* Хэдер */
 .header {
     background-color: #FFFFFF;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень снизу */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
 }
 

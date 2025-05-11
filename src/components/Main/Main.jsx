@@ -5,16 +5,15 @@ import '../Main/Main.css';
 const Main = () => {
     return (
         <div className="mainContainer">
-            <div className={`header bg-white p-3`}>
+            <div className="header">
                 <div className="headerContent">
                     <div className="searchContainer">
                         <input
                             type="text"
                             placeholder="Поиск..."
-                            className={`form-control $"searchInput}`}
+                            className="form-control searchInput"
                         />
                     </div>
-                    {/* Иконка аватара */}
                     <div className="avatarContainer">
                         <img
                             src="https://via.placeholder.com/40"
@@ -24,9 +23,6 @@ const Main = () => {
                     </div>
                 </div>
             </div>
-            {/*/!*<Stage status="completed" title={"Deploy to Dev"}/>*!/*/}
-            {/*<Pipeline></Pipeline>*/}
-            {/*<Run></Run>*/}
             <div className="content">
                 <h2 className="runsTitle">Runs</h2>
                 <RunList />
