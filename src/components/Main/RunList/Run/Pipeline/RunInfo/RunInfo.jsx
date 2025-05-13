@@ -1,7 +1,7 @@
 import React from 'react';
 import './RunInfo.css';
-import {mapStatusToColor} from "../../../../utils/utils";
-import Badges from '../Badge/Badges'
+import {mapStatusToColor} from "../../../../../../utils/utils";
+import Badges from '../../../../../../commons/Badge/Badges'
 
 const RunInfo = ({id, date, status, onFoldClick}) => {
     const badgeColor = mapStatusToColor(status.toLowerCase());

@@ -7,8 +7,8 @@
 
 .header {
     background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 1rem;
+
 }
 
 .headerContent {
@@ -24,6 +24,7 @@
 }
 
 .searchInput {
+    font-family: 'Inter', sans-serif;
     border-radius: 20px;
     border: 1px solid #e9ecef;
     padding: 0.5rem 1rem;

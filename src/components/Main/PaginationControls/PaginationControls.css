@@ -1,0 +1,24 @@
+.pagination-controls {
+    display: flex;
+    transform: scale(0.9);
+    transform-origin: top left;
+    width: 100%;
+}
+
+.pagination-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.pagination-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    flex-grow: 1;
+}

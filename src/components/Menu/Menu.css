@@ -1,12 +1,14 @@
 .sidebar {
-    width: 250px;
+    width: 225px;
     min-height: 100vh;
     background-color: #ffffff;
     box-shadow: 2px 0 4px rgba(0, 0, 0, 0.1);
     font-family: 'Inter', sans-serif;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
+    flex-shrink: 0;
 }
+
 
 .sidebar-header {
     padding: 1rem;
@@ -22,10 +24,12 @@
 
 .flow {
     color: #4b90e2;
+    font-size: 30px;
 }
 
 .k {
     color: #17a2b8;
+    font-size: 30px;
 }
 
 .nav-item {
@@ -33,13 +37,15 @@
 }
 
 .nav-link {
-    padding: 0.75rem 1rem !important;
+    padding: 0.75rem 1rem;
+    margin-left: 2rem;
     border: none !important;
     color: #333 !important;
     font-weight: 600;
     display: flex;
     align-items: center;
     justify-content: center;
+    align-content: center;
     width: 100%;
     transition: background-color 0.3s, color 0.3s;
 }
@@ -47,4 +53,39 @@
 .nav-link:hover {
     background-color: #4b90e2 !important;
     color: #ffffff !important;
+}
+
+.logo-light {
+    height: 27px;
+    position: relative;
+    width: 129px;
+}
+
+.logo-light .bright-web {
+    color: transparent;
+    font-family: "Nunito Sans-ExtraBold", Helvetica;
+    font-size: 20px;
+    font-weight: 800;
+    left: 0;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: -1px;
+    width: 121px;
+}
+
+.logo-light .date-text-wrapper {
+    color: #4880ff;
+}
+
+.logo-light .span {
+    color: #202224;
+}
+
+:root {
+    --grey-1-color: rgba(184, 184, 184, 1);
+    --grey-2-color: rgba(134, 134, 134, 1);
+    --primary-color: rgba(0, 147, 121, 1);
+    --secondary-color: rgba(1, 109, 90, 1);
+    --white-color: rgba(255, 255, 255, 1);
 }

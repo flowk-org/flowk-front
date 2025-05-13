@@ -1,6 +1,6 @@
 import React from 'react';
 import './Pipeline.css';
-import Stage from "../Stage/Stage";
+import Stage from "./Stage/Stage";
 
 const Pipeline = ({ stages, lines }) => {
     return (

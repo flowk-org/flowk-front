@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import Pipeline from "../Pipeline/Pipeline";
-import RunInfo from "../RunInfo/RunInfo";
+import Pipeline from "./Pipeline/Pipeline";
+import RunInfo from "./Pipeline/RunInfo/RunInfo";
 import "./Run.css";
 
 const getLinesFromRun = (run) => {
